@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
+  title:        "Lec1"      # Project title
+  author:       "Marco"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  ""      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
@@ -23,34 +23,34 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "in0"
+  ui[1]: "in1"
+  ui[2]: "in2"
+  ui[3]: "in3"
+  ui[4]: "in4"
+  ui[5]: "in5"
+  ui[6]: "in6"
+  ui[7]: "in7"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "o1"
+  uo[1]: "o2"
+  uo[2]: "o3"
+  uo[3]: "o4"
+  uo[4]: "o5"
+  uo[5]: "o6"
+  uo[6]: "o7"
+  uo[7]: "o8"
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "io1"
+  uio[1]: "io2"
+  uio[2]: "io3"
+  uio[3]: "io4"
+  uio[4]: "io5"
+  uio[5]: "io6"
+  uio[6]: "io7"
+  uio[7]: "io8"
 
 # Do not change!
 yaml_version: 6
