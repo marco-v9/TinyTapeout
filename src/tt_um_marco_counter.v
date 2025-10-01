@@ -34,4 +34,6 @@ module tt_um_marco_counter (
 
     assign uio_out = 8'h00;
     assign uio_oe  = 8'h00; // keep UIO as inputs
+
+    wire _unused = &{ena, 1'b0};
 endmodule
