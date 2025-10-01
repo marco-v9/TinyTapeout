@@ -4,9 +4,8 @@
 # defaults
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
-SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES += $(UPRJ_ROOT)/src/counter_298A.v
-PROJECT_SOURCES += $(UPRJ_ROOT)/src/tt_um_marco_counter.v
+SRC_DIR := $(UPRJ_ROOT)/src
+PROJECT_SOURCES := counter_298A.v tt_um_marco_counter.v
 
 ifneq ($(GATES),yes)
 
