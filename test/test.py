@@ -1,3 +1,5 @@
+# test.py (Corrected)
+
 # SPDX-FileCopyrightText: © 2024 Tiny Tapeout
 # SPDX-License-Identifier: Apache-2.0
 
@@ -70,8 +72,3 @@ async def test_project(dut):
     # We check if 'z' is present in the binary string representation of the output.
     assert 'z' in dut.uio_out.value.binstr.lower(), "Tri-state (oe=0) failed."
     dut._log.info("Tri-state test passed.")
-    # Change it to match the actual expected output of your module:
-    assert dut.uo_out.value == 50
-
-    # Keep testing the module by changing the input values, waiting for
-    # one or more clock cycles, and asserting the expected output values.
