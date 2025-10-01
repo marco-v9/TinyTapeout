@@ -29,6 +29,7 @@ module counter_298A (
     end
 
     // tri-state outputs 
-    assign y = oe ? count_q : 8'bz;
+    //assign y = oe ? count_q : 8'bz;
+    assign y = count_q;
 
 endmodule
