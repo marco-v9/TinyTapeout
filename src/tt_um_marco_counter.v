@@ -2,7 +2,7 @@
 module tt_um_marco_counter (
     input  wire [7:0] ui_in,    // 8 dedicated inputs
     output wire [7:0] uo_out,   // 8 dedicated outputs
-    input  wire [7:0] uio_in,   // 8 bidirectional inputs (when oe=0)
+    input  wire [7:0] uio_in,   // 8 bidirectional inputs 
     output wire [7:0] uio_out,  // 8 bidirectional outputs
     output wire [7:0] uio_oe,   // 1=drive uio_out, 0=input
     input  wire       ena,      // always 1 when user project is enabled
@@ -10,14 +10,14 @@ module tt_um_marco_counter (
     input  wire       rst_n     // reset (active low)
 );
     // map inputs
-    wire [7:0] d    = ui_in;     // parallel load value
-    wire       en   = uio_in[0]; // controls on bidir pins (as inputs)
-    wire       load = uio_in[1];
-    wire       up   = uio_in[2];
-    wire       oe   = uio_in[3];
+    wire en     = ui_in[0]; // Count enable
+    wire load   = ui_in[1]; // Sync load enable
+    wire up     = ui_in[2]; // Count direction
+    wire oe     = ui_in[3]; // Output enable for the tri-state bus
 
-    // DUT
-    wire [7:0] y;
+    wire [7:0] d = uio_in;   // Parallel load value comes from the bidi bus
+    wire [7:0] y;            // The counter's output wire
+
 
     counter_298A dut (
         .clk     (clk),
@@ -30,10 +30,12 @@ module tt_um_marco_counter (
         .y       (y)
     );
 
-    assign uo_out = y;
+    assign uo_out = 8'b0;
+    
+    assign uio_out = y;
 
-    assign uio_out = 8'h00;
-    assign uio_oe  = 8'h00; // keep UIO as inputs
+    assign uio_oe = {8{oe}};
 
     wire _unused = &{ena, 1'b0};
+
 endmodule
